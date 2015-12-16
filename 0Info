@@ -1,0 +1,4 @@
+For 2 antiparallel-spin electrons, methods 0,2,3 should be the same.
+For 2 parallel-spin electrons, methods 0,3 should be the same.
+So, even for a system with 2 up-spin and 2 dn-spin electrons,
+such as Be, methods 0,3 should be the same.

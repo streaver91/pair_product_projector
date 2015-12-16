@@ -1,0 +1,34 @@
+projector 0 < input_he_0.01.txt
+projector 1 < input_he_0.01.txt
+projector 2 < input_he_0.01.txt
+projector 3 < input_he_0.01.txt
+
+projector 0 < input_he_1.txt
+projector 1 < input_he_1.txt
+projector 2 < input_he_1.txt
+projector 3 < input_he_1.txt
+
+projector 0 < input_he_10.txt
+projector 1 < input_he_10.txt
+projector 2 < input_he_10.txt
+projector 3 < input_he_10.txt
+
+projector 0 < input_he_100.txt
+projector 1 < input_he_100.txt
+projector 2 < input_he_100.txt
+projector 3 < input_he_100.txt
+
+projector 0 < input_he_1_diff_spin.txt
+projector 1 < input_he_1_diff_spin.txt
+projector 2 < input_he_1_diff_spin.txt
+projector 3 < input_he_1_diff_spin.txt
+
+projector 0 < input_2up2dn.txt
+projector 1 < input_2up2dn.txt
+projector 2 < input_2up2dn.txt
+projector 3 < input_2up2dn.txt
+
+projector 0 < input_3up.txt
+projector 1 < input_3up.txt
+projector 2 < input_3up.txt
+projector 3 < input_3up.txt

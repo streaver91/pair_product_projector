@@ -1,0 +1,11 @@
+fixed bug caused by matinv changing value of the input
+
+--This line, and those below, will be ignored--
+
+M    He_1_M1.proj
+M    He_1_M2.proj
+M    He_1_M3.proj
+AM   matinv.o
+M    projector
+M    projector.f90
+AM   projector.o

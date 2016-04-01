@@ -1,0 +1,27 @@
+Command #1: 1                                                               
+Anti Symmetrization Method: 1
+==== Start Reading Input ====
+Title: He              
+Number of Types: 1
+Type, Count, Z:     1    1    2
+Nuclei Positions:
+X, Y, Z:   0.000000  0.000000  0.000000
+Numbber of Electrons: 2
+Initial Position of Electrons:
+X, Y, Z:   1.000000  0.020000  0.000000
+X, Y, Z:  -0.500000  0.030000  0.000000
+Final Position of Electrons:
+X, Y, Z:   1.010000  1.010000  0.010000
+Number of Grid Points: 500
+x_min, x_max:  -1.000000  1.000000
+y_min, y_max:  -1.000000  1.000000
+Tau:   0.010000
+==== Finished Reading Input ====
+==== Start Loading Potential ====
+Loading Potential From: u_e_tau=.01_ngrid=200
+Interpolation Succeeded!
+Loading Potential From: u_2_tau=.01_ngrid=200
+Interpolation Succeeded!
+==== Finished Loading Potential ====
+Evaluate Projector...
+Results Saved To: He_.01_M1.proj

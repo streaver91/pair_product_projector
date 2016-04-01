@@ -26,7 +26,6 @@ set format x '%.1f'
 set format y '%.1f'
 set format z '%.2f'
 
-
 splot 'He_.01_M0.proj' u 1:2:3 notitle w l lt 1
 pause 5
 splot 'He_.01_M1.proj' u 1:2:3 notitle w l lt 1

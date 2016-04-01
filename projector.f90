@@ -377,6 +377,7 @@ program projector_calc
       if (num_spin_up.ge.1) then
         recur_used(1:num_spin_up) = 0
         shift=0
+        write(6, '("Spin up:====")')
         g_eZ_det_up = evaluate_proj_recur(1, recur_used, recur_track, shift, num_spin_up)
       else
         g_eZ_det_up = 1
@@ -384,6 +385,7 @@ program projector_calc
       if (num_spin_dn.ge.1) then
         recur_used(1:num_spin_dn) = 0
         shift=num_spin_up
+        write(6, '("Spin down:====")')
         g_eZ_det_dn = evaluate_proj_recur(1, recur_used, recur_track, shift, num_spin_dn)
       else
         g_eZ_det_dn = 1
@@ -399,7 +401,7 @@ program projector_calc
       stop 'In evaluate_proj, only cases 0-3 are implemented'
     end select
     evaluate_proj = g_eZ_det_up * g_eZ_det_dn * exp(E_T*tau - u_ee)
-
+    write(6, '("evaluate_proj = ", ES20.10)') evaluate_proj
     ! if (u_ee_method == 3 .and. num_elec == 2) then
     !  evaluate_proj = (g_eZ(1, 1) * g_eZ(2, 2) * exp(-get_u_ee(3, 1)) - g_eZ(1, 2) * g_eZ(2, 1) * exp(-get_u_ee(3, 2))) * exp(E_T * tau)
     !  write (*, *) "get_u_ee3", -get_u_ee(3, 1), -get_u_ee(3, 2)
@@ -428,6 +430,8 @@ program projector_calc
     integer :: sn
     integer :: recur_used(n), recur_track(n)
     
+    character(len=32) :: track_format
+    write(track_format, '(A, i0, A)') '("track = "', n, 'i5)'
     if (level > n) then
       ret = 1.0_rk
       do i = 1, n
@@ -438,6 +442,8 @@ program projector_calc
         endif
       enddo
       ret = ret * exp(-get_u_ee0(recur_track, shift, n))
+      write(6, track_format) recur_track
+      write(6, '("u_ee0 = ", EN20.10)') ret ! test
       return
     endif
     
@@ -514,8 +520,7 @@ program projector_calc
     real(rk) :: r_ij(3), r_ij_prime(3)
     integer :: iflag
 
-    get_u_ee0 = 0.0_rk
-    
+    get_u_ee0 = 0.0_rk 
     do i = 1, n
       track_i = recur_track(i)
       do j = i + 1, n

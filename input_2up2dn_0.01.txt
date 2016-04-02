@@ -1,0 +1,17 @@
+Test_2up2dn        title
+1                   n_type
+1                   n_nuclei
+2                   z_nuclei
+0. 0. 0.            r_nuclei
+4 2                 n_elec, n_spin_up
+1. 0.02 0.          r_elec1_ini
+-.5 0.03 0.         r_elec2_ini
+-1. 0.02 0.         r_elec3_ini
+1.1 -1.1 0.         r_elec4_ini
+1.01 1.01 0.01      r_elec1_fin
+-1.01 1.02 0.01     r_elec2_fin
+1.02 -1.02 0.       r_elec3_fin
+100                 n_grid
+-2. 2.              x_min, xmax
+-2. 2.              y_min, ymax
+0.01                   tau
